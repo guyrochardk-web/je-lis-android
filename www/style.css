@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+:root { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #17233b; background: #f2f6fc; }
+body { margin: 0; min-height: 100vh; }
+.app { width: min(100%, 560px); margin: 0 auto; padding: 18px 16px 28px; }
+header { text-align: center; padding: 14px 0 20px; }
+.brand { font-size: 2rem; font-weight: 900; letter-spacing: .08em; color: #2457a6; }
+.subtitle { color: #65738b; font-size: .95rem; }
+.card { background: white; border-radius: 22px; padding: 18px; margin: 14px 0; box-shadow: 0 8px 24px rgba(32, 65, 115, .08); }
+label { display:block; font-weight: 700; margin-bottom: 8px; }
+select { width: 100%; padding: 13px; border: 1px solid #d6dfed; border-radius: 12px; font-size: 1rem; background: #fff; color: #17233b; }
+.progress-line { display:flex; justify-content:space-between; gap:10px; color:#68768d; font-size:.85rem; margin-top:14px; }
+.practice { text-align:center; padding: 22px 18px 20px; }
+.type-label { color:#71809a; font-size:.78rem; font-weight:800; letter-spacing:.12em; }
+.prompt { min-height: 190px; display:grid; place-items:center; font-size: clamp(5rem, 24vw, 8rem); font-weight:900; color:#2457a6; overflow-wrap:anywhere; line-height:1.05; padding:12px 0; }
+.actions { display:flex; justify-content:center; gap:28px; margin: 8px 0 12px; }
+.actions button { width:76px; height:76px; border:0; border-radius:50%; color:white; font-size:2.5rem; font-weight:800; box-shadow:0 5px 12px rgba(0,0,0,.12); }
+.wrong { background:#e34d58; }
+.correct { background:#22a66b; }
+button { cursor:pointer; touch-action:manipulation; }
+.hint { color:#69778d; font-size:.9rem; min-height:24px; }
+.next { margin-top:14px; width:100%; border:0; border-radius:14px; padding:15px; background:#2457a6; color:white; font-size:1rem; font-weight:800; }
+.stats h2 { margin:0 0 6px; font-size:1.1rem; }
+.stats p { margin:0 0 12px; color:#68768d; font-size:.9rem; }
+.review-list { display:flex; flex-wrap:wrap; gap:8px; }
+.review-chip { background:#fff0f0; color:#b52f3a; border:1px solid #ffd5d8; padding:7px 11px; border-radius:999px; font-weight:700; }
+footer { text-align:center; color:#7b8799; font-size:.78rem; padding:12px 8px; }
+.reset { display:block; margin:12px auto 0; border:0; background:transparent; color:#b13b45; text-decoration:underline; font-size:.85rem; }
+@media (max-width:360px) { .actions button { width:66px; height:66px; } .prompt { min-height:160px; } }

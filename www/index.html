@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#2457a6">
+  <title>Je lis !</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand">JE LIS !</div>
+      <div class="subtitle">Mon petit atelier de lecture</div>
+    </header>
+
+    <section class="settings card">
+      <label for="level">Contenu à travailler</label>
+      <select id="level">
+        <option value="all">Tout mélanger</option>
+        <option value="letters">Lettres</option>
+        <option value="syllables">Syllabes</option>
+        <option value="words">Mots simples</option>
+      </select>
+      <div class="progress-line">
+        <span id="roundCount">0 essais</span>
+        <span id="successRate">0 % réussis</span>
+      </div>
+    </section>
+
+    <section class="practice card">
+      <div class="type-label" id="itemType">PRÊTE À LIRE ?</div>
+      <div class="prompt" id="prompt" aria-live="polite">A</div>
+      <div class="actions">
+        <button id="wrong" class="wrong" aria-label="Incorrect">✕</button>
+        <button id="correct" class="correct" aria-label="Correct">✓</button>
+      </div>
+      <div class="hint" id="hint">Demande-lui de lire, puis valide sa réponse.</div>
+      <button id="next" class="next">Afficher une proposition</button>
+    </section>
+
+    <section class="card stats">
+      <h2>À revoir</h2>
+      <p id="reviewText">Les éléments marqués d'une croix reviendront plus souvent.</p>
+      <div id="reviewList" class="review-list">Aucun élément à revoir pour le moment.</div>
+    </section>
+
+    <footer>
+      Les résultats sont conservés sur cet appareil.
+      <button id="reset" class="reset">Réinitialiser les résultats</button>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
