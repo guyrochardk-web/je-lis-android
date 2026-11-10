@@ -1,1 +1,48 @@
 
+name: Construire Je lis APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Recuperer le projet
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Installer Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Installer les dependances
+        run: npm install
+
+      - name: Ajouter Android
+        run: npx cap add android
+
+      - name: Synchroniser
+        run: npx cap sync android
+
+      - name: Compiler APK
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: Recuperer APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Je-lis-APK
+          path: android/app/build/outputs/apk/debug/app-debug.apk
