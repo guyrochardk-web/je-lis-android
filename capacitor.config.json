@@ -1,0 +1,6 @@
+{
+  "appId": "ht.alasso.jelis",
+  "appName": "Je lis !",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
